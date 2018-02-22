@@ -1,0 +1,22 @@
+body {
+    background-image: url("assets/images/dance.jpeg")!important;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+}
+
+p {
+	color: white;
+	text-align: center;
+}
+
+.top {
+    width:100%;
+    margin: 0 auto;
+}
+
+h4,h6 { color: white;
+
+}
+

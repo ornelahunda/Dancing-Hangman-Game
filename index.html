@@ -1,0 +1,96 @@
+<!-- The HTML file for my Hangman-Game -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Link to CSS file -->
+    <link rel="stylesheet" type="text/css" media="screen" 
+ href="assets/css/style.css">
+ <!-- Link to JS file -->
+ <script src="assets/javascript/game.js"></script>
+<!-- Title -->
+<title>  Dancing Hangman Game </title>
+</head>
+
+
+
+<body onload="startGame()">
+  
+    <div class="container">
+   
+    <div class="row">
+
+    <div class="col-sm-12">
+ <center><img class= "top" src="assets/images/dance.jpeg" style="width:70%; height:40%;" ></center>
+    </div>
+
+    </div>
+     
+    <main>
+    <!-- Main Content -->
+        <div class="row">
+        <div class="col-sm-3 col-sm-offset-3 box"> 
+            <br>     
+            <h4> Winner image:</h4>
+            <br> 
+<div class="img-responsive center-block" id="dancingimg">  </div>
+       
+
+            </div>
+         
+            <div class="col-sm-6 box"> 
+    <br> 
+   <h4> Category :  Dancing Genres </h4>
+    <br>
+    
+
+
+    <div class="right-side">
+
+
+        <h6 id="instructions">Press any letter to get started!</h6>
+        <br>
+    
+        
+         <div><strong>Wins:</strong></div>
+          <br>              
+        <div id="wins">0</div>
+          <br>           
+    
+                   
+     <div> <strong>Current Word:</strong></div>
+    <br>
+     <div id="currentword">_ _ _ _ _ _ </div>
+     <br>
+                   
+                             
+    
+     <div><strong>Number of Guesses Remaining:</strong></div>
+     <br>
+     
+    <div id="guessesLeft">10</div>
+    <br>  
+                            
+                    
+     <div> <strong>Letters Already Guessed:</strong></div>
+     <br>
+     <div id="alreadyguessed"></div>
+      <br>              
+      
+         
+            
+    
+                   
+    </div>
+    </div>  
+   </div>   
+       </main> 
+      </div>  
+    </body>        
+      </html>
