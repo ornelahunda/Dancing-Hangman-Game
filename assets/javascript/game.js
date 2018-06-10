@@ -7,10 +7,12 @@ var  dances =["ballet", "tango",
 var oneDance=[];
 // danceArray -- to hold the chosen word underscores
  var danceArray = [];
-//  creating wins variable
+//  creating wins/loses variable
 var wins = 0;
+var lossCounter = 0;
 // user choices
 var choices = 10;
+
 // hold the underscores
 var underscores;
 
@@ -21,8 +23,6 @@ document.getElementById("wins").innerHTML = wins;
 //  with as much underscores as the chosen word
 document.getElementById("currentword").innerHTML = underscores;
 document.getElementById("alreadyguessed").innerHTML = guessed;
-
-
 
 
 //Using a function to start the game 
@@ -41,7 +41,7 @@ function startGame() {
 
       document.getElementById("guessesLeft").innerHTML = choices;
 
-      //clears the Letters Already Guessed div
+
       document.getElementById("alreadyguessed").innerHTML = "";
 
     
@@ -49,25 +49,25 @@ function startGame() {
 
     document.onkeyup = function (event) {
         var userGuess = event.key;
- 
+
 // Creating a cycle that checks if the user guess letter matches the computer guess
-        for (var j = 0; j < oneDance.length; j++) {
+        for (var i = 0; i < oneDance.length; i++) {
 
 //if user guess matches we save the answer at danceArray, position i, replacing the underscore
-            if (oneDance[j] === userGuess) {
+            if (oneDance[i] === userGuess) {
 
-                danceArray[j] = userGuess;
-            }
+                danceArray[i] = userGuess;
+                }
 
         }
-
+    
 // guessed letters
         var guessed = document.getElementById("alreadyguessed");
         var guessContent = guessed.innerHTML;
         var guessArray = Array.from(guessContent);
         
         
-// creating an array with the user choices 
+//alphabet array
         var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
         "q","r","s","t","u","v","w","x","y","z"];
 
@@ -103,7 +103,7 @@ alphabet.indexOf(userGuess) !== -1) {
 
 var danceArrayString = danceArray.toString();
 if (danceArrayString.indexOf("_") === -1) {
-    
+ 
 
     if (oneDance === "tango") {
 
@@ -160,14 +160,14 @@ document.getElementById("dancingimg").innerHTML = "<img class='img-responsive ce
        
       
     }
-      
-          
+
+    
     //recording wins
             wins++;
             document.getElementById("wins").innerHTML = wins;        
-            
-     
-            oneDance = dances[Math.floor(Math.random() * dances.length)];
+
+
+    oneDance = dances[Math.floor(Math.random() * dances.length)];
            
             for ( i = 0; i < oneDance.length; i++) {
 
@@ -191,7 +191,7 @@ document.getElementById("dancingimg").innerHTML = "<img class='img-responsive ce
         if (choices === 0) {
 
            oneDance = dance [Math.floor(Math.random() * dances.length)];
-
+           
             for ( i = 0; i < oneDance.length; i++) {
 
                 danceArray[i] = "_";
